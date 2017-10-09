@@ -3,6 +3,12 @@ Coinomi Wallet
 
 Our goal is to support every cryptocurrency with an active development team. Store all the best cryptocurrency through a single app, without sacrificing security. Private keys are stored on your own device. Instead of having one backup file for every coin, you get a master key that can be memorized or stored on a piece of paper. Restore all wallets from a single recovery phrase.
 
+
+# Flurbo Coin Addition  
+This fork is more or less to add the coin 'flurbo', initial changes have it labled as 'flurbos' will get around to changing this.  
+Have just uploaded for any one else to use for now, till proper release. ( or possible addition to official coinomi. *pending response* )
+
+
 TODOs:
 
 * Create instrumentation tests to test a signed APK
