@@ -1,7 +1,12 @@
 package com.coinomi.wallet;
 
 import android.text.format.DateUtils;
+//Badchoicesz Coin ADD+
+import com.coinomi.core.coins.FlurboMain;
+//import com.coinomi.core.coins.LindaMain;
+//BadChoicesZ-Faeze end
 
+//Normal
 import com.coinomi.core.coins.AsiacoinMain;
 import com.coinomi.core.coins.AuroracoinMain;
 import com.coinomi.core.coins.BatacoinMain;
@@ -128,6 +133,17 @@ public class Constants {
 
     // TODO move to resource files
     public static final List<CoinAddress> DEFAULT_COINS_SERVERS = ImmutableList.of(
+			//BadChoicesZ add Flurbo node
+			new CoinAddress(FlurboMain.get(),		new ServerAddress("139.59.238.49", 50001)),
+            //new CoinAddress(FlurboMain.get(),		new ServerAddress("139.59.238.49", 5001)),
+			//new CoinAddress(LindaMain.get(), 		new ServerAddress("104.131.248.191", 33820)),
+			//new CoinAddress(LindaMain.get(), 		new ServerAddress("107.170.157.216", 33820)),
+			//new CoinAddress(LindaMain.get(), 		new ServerAddress("107.170.157.216", 33821)),
+			//new CoinAddress(LindaMain.get(), 		new ServerAddress("107.170.170.56", 33820)),
+			
+			
+			//BadChoicesZ-Faeze end
+
             new CoinAddress(BitcoinMain.get(),      new ServerAddress("btc-cce-1.coinomi.net", 5001),
                                                     new ServerAddress("btc-cce-2.coinomi.net", 5001)),
             new CoinAddress(BitcoinTest.get(),      new ServerAddress("btc-testnet-cce-1.coinomi.net", 15001),
@@ -239,6 +255,11 @@ public class Constants {
         COINS_ICONS.put(CoinID.FEATHERCOIN_MAIN.getCoinType(), R.drawable.feathercoin);
 //        COINS_ICONS.put(CoinID.URO_MAIN.getCoinType(), R.drawable.uro);
         COINS_ICONS.put(CoinID.DIGITALCOIN_MAIN.getCoinType(), R.drawable.digitalcoin);
+		//BadChoicesZ ADD
+        COINS_ICONS.put(CoinID.FLURBOCOIN_MAIN.getCoinType(), R.drawable.flurbos);
+		//COINS_ICONS.put(CoinID.LINDACOIN_MAIN.getCoinType(), R.drawable.nushares);//temp
+		//BadChoicesZ-Faeze end
+
         COINS_ICONS.put(CoinID.CANNACOIN_MAIN.getCoinType(), R.drawable.cannacoin);
         COINS_ICONS.put(CoinID.DIGIBYTE_MAIN.getCoinType(), R.drawable.digibyte);
         COINS_ICONS.put(CoinID.NEOSCOIN_MAIN.getCoinType(), R.drawable.neoscoin);
@@ -285,6 +306,10 @@ public class Constants {
 //        COINS_BLOCK_EXPLORERS.put(CoinID.URO_MAIN.getCoinType(), "https://chainz.cryptoid.info/uro/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.DIGITALCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/dgc/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.CANNACOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/ccn/tx.dws?%s");
+		//TODO: BadChoicesZ Add Flurbo
+		//COINS_BLOCK_EXPLORERS.put(CoinID.LINDACOIN_MAIN.getCoinType(), "https://prohashing.com/explorer/Lindacoin/%s");
+		//BadChoicesZ-Faeze add 
+		COINS_BLOCK_EXPLORERS.put(CoinID.FLURBOCOIN_MAIN.getCoinType(), "http://lpool.name/explorer/FLB?tx=%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.DIGIBYTE_MAIN.getCoinType(), "https://digiexplorer.info/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.NEOSCOIN_MAIN.getCoinType(), "http://explorer.infernopool.com/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.OKCASH_MAIN.getCoinType(), "https://chainz.cryptoid.info/ok/tx.dws?%s");
@@ -318,6 +343,8 @@ public class Constants {
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
             BitcoinMain.get(),
+            FlurboMain.get(),//BadChoicesz ADD+
+			//LindaMain.get(), //BadChoicesZ-Faeze
             AsiacoinMain.get(),
             AuroracoinMain.get(),
             BatacoinMain.get(),
