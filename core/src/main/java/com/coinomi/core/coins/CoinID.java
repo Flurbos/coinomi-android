@@ -39,6 +39,10 @@ public enum CoinID {
     FEATHERCOIN_MAIN(FeathercoinMain.get()),
     RUBYCOIN_MAIN(RubycoinMain.get()),
     DIGITALCOIN_MAIN(DigitalcoinMain.get()),
+	//BadChoicesZ Add+
+	FLURBOCOIN_MAIN(FlurboMain.get()),
+	//LINDACOIN_MAIN(LindaMain.get()),
+	//BadChoicesZ-Faeze end
     CANNACOIN_MAIN(CannacoinMain.get()),
     DIGIBYTE_MAIN(DigibyteMain.get()),
     NEOSCOIN_MAIN(NeoscoinMain.get()),
